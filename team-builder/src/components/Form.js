@@ -19,9 +19,9 @@ const Form = props => {
 
     return(
         <form onSubmit={submitForm}>
-            <label htmelFor='name>Team Member</label>
+            <label htmelFor='name'>Name</label>
                 <input 
-                    id='name
+                    id='name'
                     name='name'
                     type='text'
                     placeholder='Name'
