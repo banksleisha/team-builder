@@ -8,12 +8,12 @@ const Form = props => {
     })
 
     const changeHandler =event=> {
-        setNewMember({...member, [event.target.name]: event.target.value})
+        setMember({...member, [event.target.name]: event.target.value})
     }
 
     const submitForm = event => {
         event.preventDefault()
-        props.setNewMember(member)
+        props.addNewMember(member)
         setMember({name:"", email:"", role:""})
     }
 
