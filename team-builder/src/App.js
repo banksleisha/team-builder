@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import Member from './components/Member';
+import data from './data';
 
 
 function App() {
-  const [members, setMember] = useState( [] );
+  const [members, setMember] = useState(data);
 
   const addNewMember = member => {
       setMember ([...members, member ])
@@ -16,11 +17,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>New Members</h2>
-          <Form addNewMember={addNewMember} />
-          <Member memberList={members} />
-       
-       
       </header>
+      <div className="body">
+      <Form addNewMember={addNewMember} />
+        <div className="form-box">
+            <Member memberList={members} />
+        </div>
+      </div>
     </div>
   );
 }
